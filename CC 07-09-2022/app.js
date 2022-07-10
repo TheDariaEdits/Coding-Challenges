@@ -6,12 +6,16 @@
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
-function isIsogram(str){
+/*function isIsogram(str){
     let array = str.toLowerCase().split('')
     let  checkedArray = array.map(function (a) {
       return array.indexOf(a) == array.lastIndexOf(a) ?  true : false})
   	const isTrue = x => x === true
   	return checkedArray.every(isTrue)
   
+  } */
+
+  function isIsogram(str){
+    return str.toLowerCase().split('').length === [...new Set(str.toLowerCase().split('') )].length
   }
   
