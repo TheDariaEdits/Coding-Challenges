@@ -6,7 +6,7 @@
 // "App7Test"        -->  "app7_test"
 // 1                 -->  "1"
 
-function toUnderscore(string) {
+/*function toUnderscore(string) {
     //check if string or integer
     if(Number.isInteger(string) === false){
       //if string change to array
@@ -27,4 +27,8 @@ function toUnderscore(string) {
     }
     //array is now joined to become string
     return newString.join('')
+  } */
+
+  function toUnderscore(string) {
+    return string.toString().split(/(?=[A-Z])/).join('_').toLowerCase()
   }
